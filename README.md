@@ -2,7 +2,7 @@
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/georgeJobs/go-antpathmatcher)](https://goreportcard.com/report/github.com/georgeJobs/go-antpathmatcher)
 [![Run Tests](https://github.com/georgeJobs/go-antpathmatcher/actions/workflows/go.yml/badge.svg)](https://github.com/georgeJobs/go-antpathmatcher/actions/workflows/go.yml)
-
+[![GoDoc](https://godoc.org/github.com/georgeJobs/go-antpathmatcher?status.svg)](https://godoc.org/github.com/georgeJobs/go-antpathmatcher)
 ## 🌌Usage 
 
 ### Start using it
