@@ -492,3 +492,14 @@ func Test_caseInsensitive(t *testing.T) {
 	e.True(pathMatcher.Match("/group/{groupName}/members", "/Group/Sales/Members"))
 	e.True(pathMatcher.Match("/Group/{groupName}/Members", "/group/Sales/members"))
 }
+
+// gh-27506
+func Test_consistentMatchWithWildcardsAndTrailingSlash(t *testing.T) {
+	pathMatcher = NewAntPathMatcher()
+	e := assert.New(t)
+	e.True(pathMatcher.Match("/*/foo", "/en/foo"))
+	e.False(pathMatcher.Match("/*/foo", "/en/foo/"))
+	e.True(pathMatcher.Match("/**/foo", "/en/foo"))
+	e.False(pathMatcher.Match("/**/foo", "/en/foo/"))
+
+}
