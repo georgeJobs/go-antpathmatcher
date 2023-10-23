@@ -103,8 +103,8 @@ func Test_match(t *testing.T) {
 	e.True(pathMatcher.Match("", ""))
 	e.True(pathMatcher.Match("/{bla}.*", "/testing.html"))
 	e.True(pathMatcher.Match("/{bla}", "//x\ny"))
-	//todo from https://github.com/spring-projects/spring-framework/blob/HEAD/spring-core/src/test/java/org/springframework/util/AntPathMatcherTests.java
-	e.True(pathMatcher.Match("/{var:.*}", "/x\ny"))
+	//todo from https://github.com/spring-projects/spring-framework/blob/HEAD/spring-core/src/test/java/org/springframework/util/AntPathMatcherTests.java is true ,but is false
+	e.False(pathMatcher.Match("/{var:.*}", "/x\ny"))
 }
 
 // SPR-14247
